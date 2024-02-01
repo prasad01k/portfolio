@@ -78,6 +78,8 @@ nav ul li a:hover::after{
 }
 .about-col-1{
     flex-basis: 35%;
+    position: relative;
+    left: 30px;
 }
 .about-col-1 img{
     width: 100%;
@@ -133,43 +135,81 @@ nav ul li a:hover::after{
 
 /* ------services-------- */
 
-#services{
-    padding: 30px 0;
+#services {
+    margin-top: 20px;
+    padding: 70px 0;
 }
-.services-list{
+
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
-    background: #262626;
+
+.service-item {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Prevent background image from repeating */
 }
-.services-list div i{
+
+.service-item .content {
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.service-item:hover {
+    background-color: cyan;
+    transform: translateY(-10px);
+    color: #080808;
+}
+
+.service-item:hover .content {
+    opacity: 1;
+    color: black;
+}
+
+.service-item i {
     font-size: 50px;
     margin-bottom: 30px;
 }
-.services-list div h2{
+
+
+.service-item h2,
+.service-item a {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.service-item:hover h2,
+.service-item:hover a {
+    opacity: 1;
+}
+
+.service-item h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
+
+.service-item a {
     text-decoration: none;
     color: #fff;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
-.services-list div:hover{
-    background: #ff004f;
-    transform: translateY(-10px);
-}
+
 
 /* ----------portfolio----------------- */
 
@@ -281,6 +321,7 @@ nav ul li a:hover::after{
 .btn.btn2{
     display: inline-block;
     background: #ff004f;
+    cursor: pointer;
 }
 .contact-right form{
     width: 100%;
@@ -312,12 +353,12 @@ form btn2{
 }
 
 /* -----------------css for small screen------- */
-nav.fas{
+nav .fas{
     display: none;
 }
 
 
-@media only screen and (max-with: 600px){
+@media only screen and (max-width: 600px){
     #header{
         background-image: url("add another file for mobile");
     }
@@ -328,7 +369,7 @@ nav.fas{
     .header-text h1{
         font-size: 30px;
     }
-    nav.fas{
+    nav .fas{
         display: block;
         font-size: 25px;
     }
@@ -338,7 +379,7 @@ nav.fas{
         top: 0;
         right: -200px;
         width: 200px;
-        height: 100px;
+        height: 100vh;
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
