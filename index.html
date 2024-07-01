@@ -1,293 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://kit.fontawesome.com/cfd51a0e37.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="header">
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="./images/profile_pic/cropped_image.png"/>
+        <title>HariNagaVaraPrasadKolagani</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    </head>
+    <body>
+        <!--NavBar-->
         <div class="container">
-            <nav>
-                <h2>PORTFOLIO</h2> <!---can be added a logo by using img-->
-                <ul id="sidemenu">
-                    <li><a href="#header" style="--i:1;">Home</a></li>
-                    <li><a href="#about" style="--i:2;">About</a></li>
-                    <li><a href="#services" style="--i:3;">Certifications</a></li>
-                    <li><a href="#portfolio" style="--i:4;">Work</a></li>
-                    <li><a href="#contact" style="--i:5;">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+            <nav id="header">
+                <div class="nav-logo">
+                    <p class="nav-name">Logo</p>
+                </div>
+                <div class="nav-menu" id="NavMenu">
+                    <ul class="nav_menu_list">
+                        <li class="nav_list">
+                            <a href="#home" class="nav-link active-link">Home</a>
+                            <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                            <a href="#about" class="nav-link">About</a>
+                            <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                            <a href="#projects" class="nav-link">Projects</a>
+                            <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                            <a href="#contact" class="nav-link">Contact</a>
+                            <div class="circle"></div>
+                        </li>
+                    </ul>
+                </div>
+                <!--Dark Mode-->
+                <div class="mode">
+                    <div class="moon-sun" id="toggle-switch">
+                        <i class="fa fa-moon" id="moon"></i>
+                        <i class="fa fa-sun" id="sun"></i>
+                    </div>
+                </div>
+                <div class="nav-menu-btn">
+                    <i class="uil uil-bars" onclick="menuFunction()"></i>
+                </div>
             </nav>
-            <div class="header-text">
-                <h1>Hi, I'm<br> <span>Hari</span> Naga Vara Prasad</h1>
-                <h3>And I'm a <span class="multiple-text"></span></h3>
-            </div>
-            <a href="images/Resume.pdf" download="" class="btn btn2"><i class="fa-solid fa-download"></i> Download
-                CV</a>
-            <div class="image_"> 
-                <img src="images/Hari Naga Vara Prasad.JPG" alt="not found" class="shape">
-                <img src="images/Hari Naga Vara Prasad.JPG" alt="not found" class="pic">
-            </div>
-        </div>
-        </div>
-    </div>
 
-<!-------------about----------------->
 
-    <div id="about">
-        <div class="continer">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/Hari Naga Vara Prasad.JPG" alt="not found">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p> </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('certification')">Certifications</a></p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Programming</span><br>C, JAVA, Python</li>
-                            <li><span>Cloud</span><br>AWS</li>
-                            <li><span>Web development</span><br>React, Django, Spring Boot, SQL, MongoDB</li> 
-                        </ul> 
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>BTech</span><br>KL University  <br>2021-2025</li>
-                            <li><span>Intermediate</span><br>Sri Sarada Junior College <br>2019-2021</li>
-                            <li><span>High School(10th)</span><br>Ravindra Bharathi High School  <br>2018-2019</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="certification">
-                        <ul>
-                            <li><span>AWS</span><br>AWS Cloud Practitioner</li>
-                            <li><span>Red Hat</span><br>Red Hat Certified Enterprise Application Developer</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- -----------------------skills-------- -->
-    <div class="inner">
-        <div class="header">
-            <h1> My Skills</h1>
-        </div>
-        <div class="container-skills">
-            <div class="skill-box">
-                <div class="skill-title">
-                    <div class="skill-img">
-                        <img src="images/html5.jpeg" class="skill-icon">
-                    </div>
-                    <h3>HTML 5</h3>
-                </div>
-                <p>This a pragraph about the skill</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-title">
-                    <div class="skill-img">
-                        <img src="images/html5.jpeg" class="skill-icon">
-                    </div>
-                    <h3>HTML 5</h3>
-                </div>
-                <p>This a pragraph about the skill</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-title">
-                    <div class="skill-img">
-                        <img src="images/html5.jpeg" class="skill-icon">
-                    </div>
-                    <h3>HTML 5</h3>
-                </div>
-                <p>This a pragraph about the skill</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-title">
-                    <div class="skill-img" class="skill-icon">
-                        <img src="images/html5.jpeg" class="skill-icon">
-                    </div>
-                    <h3>HTML 5</h3>
-                </div>
-                <p>This a pragraph about the skill</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- -------------Services---------------- -->
-
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">Certifications</h1>
-                <div class="services-list">
-                    <div class="service-item"
-                        style="background-image: url('images/aws-certified-cloud-practitioner.png');">
-                        <div class="content">
-                            <i class="fa-brands fa-aws"></i>
-                            <h2>AWS Cloud Practitioner</h2>
-                            <a href="https://www.credly.com/badges/38e54a70-8905-45e8-ac80-2879e9a9dfd4/public_url"
-                                style="color: black; text-decoration: none;">VIEW CREDENTIALS</a>
+            <!--main-->
+            <main class="wrapper">
+                <section class="featured-box" id="home">
+                    <div class="featured-text">
+                        <div class="hello">
+                            <p>Hello I'm</p>
+                        </div>
+                        <div class="featured-name">
+                            <span class="typedText"></span>
+                        </div>
+                        <div class="text-info">
+                            <p>About me or carrier object ---</p>
+                        </div>
+                        <div class="text-btn">
+                            <button class="btn">Hire Me</button>
+                            <button class="btn">Download CV<i class="uil uil-file"></i></button>
+                        </div>
+                        <div class="social_icons">
+                            <div class="icon-circle">
+                                <div class="icon"><i class="uil uil-instagram"></i></div>
+                                <div class="icon"><i class="uil uil-instagram"></i></div>
+                                <div class="icon"><i class="uil uil-instagram"></i></div>
+                                <div class="icon"><i class="uil uil-instagram"></i></div>
+                            </div>
                         </div>
                     </div>
-    
-                    <div class="service-item"
-                        style="background-image: url('images/red-hat-certified-enterprise-application-developer.png');">
-                        <div class="content">
-                            <i class="fa-brands fa-redhat"></i>
-                            <h2>RedHat Enterprise Application Developer</h2>
-                            <a href="https://www.credly.com/badges/2da6ee05-4f55-4b09-87a5-ad726b64a327/public_url"
-                                style="color: black; text-decoration: none;">VIEW CREDENTIALS</a>
+                    <div class="featured-image">
+                        <div class="image">
+                            <img src="./images/profile_pic/home_pic.jpg" alt="">
                         </div>
                     </div>
-                    
-                </div>
+                </section>
+
+
+                <!--about me-->
+            </main>
+
+
         </div>
-    </div>
 
-
-    <!-- -------------- Portfolio-------------- -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="image">
-                    <div class="layer">
-                        <h3>BookMaker System</h3>
-                        <p>this is some discription</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="image">
-                    <div class="layer">
-                        <h3>BookMaker System</h3>
-                        <p>this is some discription</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="image">
-                    <div class="layer">
-                        <h3>OP Health Clinic</h3>
-                        <p>this is some discription</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="image">
-                    <div class="layer">
-                        <h3>E-Visa</h3>
-                        <p>this is some discription</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- <a href="#" class="btn">See more</a> -->
-        </div>
-    </div>
-
-<!-- ---------------------contact------------------------- -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i>Kolaganiprasad01@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i>9392813688</p>
-                <div class="social-icons">
-                    <a href=""><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
-                </div>
-                <a href="add the document file. keep the file in the images and write the path" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="'submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="copyright">
-        <p>Made by Kolagani Hari Naga Vara Prasad</p>
-    </div>
-</div>
-
-
-
-
-
-
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemeu.style.right = "0";
-        }
-        function closemenu(){
-            sidemeu.style.right = "-200px";
-        }
-    </script>
-
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzq8E5VuQkXB8j4vRsaNpIaReSPeTg80Y7DaKt-8kCJlz-Jb76jYltG4oM7mTwckuY2rA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-  <script>
-    var typed = new Typed(".multiple-text", {
-        strings: ["Student", "Programmer", "Web Developer"],
-        typeSpeed: 100, 
-        backSpeed: 100,
-        backDelay: 1000, 
-        loop: true
-    })
-  </script>
-</body>
+        <script src="index.js"></script>
+    </body>
 </html>
